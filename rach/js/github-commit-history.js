@@ -34,6 +34,9 @@
                     }
 
                     commit = $.extend(commit, options);
+                    // Generate gravatar ID
+                    commit.commit.author.gravatar_id = $.md5(commit.commit.author.email.toLowerCase());
+                    commit.commit.author.gravatar_size = options["gravatar_size"];
 
                     var html = Mustache.render(template, commit);
                     obj.append(html);
