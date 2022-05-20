@@ -16,7 +16,7 @@
             var obj = $(this);
 
             var template;
-            $.get('js/_commit.html', function(data) {
+            $.get('js/commit.html', function(data) {
                 template = data;
             }, 'text');
 
